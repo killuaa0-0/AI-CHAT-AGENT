@@ -7,7 +7,7 @@ import { QdrantVectorStore } from '@langchain/qdrant';
 import OpenAI from 'openai';
 
 const client = new OpenAI({
-  apiKey: '',
+  apiKey:process.env.OPENAI_API_KEY,
 });
 const queue = new Queue('file-upload-queue', {
   connection: {
